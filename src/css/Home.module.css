@@ -1,0 +1,86 @@
+/* src/css/Home.module.css */
+
+.homeContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* Dark gray text */
+}
+
+.header {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6);
+  pointer-events: none;
+}
+
+.headerOverlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff; /* White text */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.headerOverlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: green;
+}
+
+.headerOverlay p {
+  font-size: 1.5rem;
+}
+
+.featuresSection {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9; /* Light Gray */
+  text-align: center;
+}
+
+.featuresSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a8438; /* Green heading */
+ 
+}
+
+.featuresGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.featureItem {
+  background-color: #fff; /* White item */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  flex: 1 1 250px;
+  border: 1px solid #8df686ce; /* light gray border */
+}
+
+.featureItem h3 {
+  margin-bottom: 1rem;
+  color: #33e86fb1; /* Darker header text */
+}
+
+.featureItem p {
+  font-size: 1rem;
+  color: #444; /* Slightly lighter gray text */
+}

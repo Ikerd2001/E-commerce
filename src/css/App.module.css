@@ -1,0 +1,214 @@
+/* === Base Styles === */
+:global(html, body, #root) {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-color: #fff; /* White background */
+  color: #222; /* Darker gray text for better readability */
+  line-height: 1.6;
+}
+
+/* Center content container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3 {
+  color: #111; /* Almost black headings */
+  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+}
+
+/* === Logo === */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #1a8438); /* Green shadow */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #1a8438); /* Green shadow */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navContainer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff; /* White navbar */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 1.3rem;
+}
+
+.navLink {
+  color: #080808; 
+  background-color: #f5f5f5; /* Very light green background */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem; /* Slightly smaller font */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  background-color: #d1fae5; /* Soft mint hover */
+  color: #065f46; /* Darker green on hover */
+}
+
+/* Highlight active nav link */
+.activeLink {
+  background-color: #065f46; /* Dark green active background */
+  color: #fff; /* White active text */
+  box-shadow: 0 0 8px #065f46aa; /* Subtle green glow */
+}
+
+/* Cart count badge */
+.cartCount {
+  background-color: #065f46; /* Dark green badge */
+  color: #fff; /* White text */
+  border-radius: 9999px;
+  padding: 0 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 0 4px #065f46aa;
+}
+
+/* === Main Content === */
+section {
+  background-color: #b3f6c7; /* Soft mint background */
+  padding: 2rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Card Component === */
+.card {
+  background-color: #ffffff; /* White cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* === Forms === */
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border: 1px solid #94a3b8;
+  border-radius: 5px;
+  background-color: #fff; /* White form fields */
+  color: #62e832; /* Darker text */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* === Buttons === */
+button,
+.review-form button {
+  background-color: #065f46; /* Dark green buttons */
+  color: #fff; /* White text */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.review-form button:hover {
+  background-color: #1a8438; /* Even darker green on hover */
+}
+
+/* === Footer === */
+footer {
+  background-color: #34ed75b6; /* Dark green footer */
+  color: #fff; /* White text */
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* === Review Page === */
+.review-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
